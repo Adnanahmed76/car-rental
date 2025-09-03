@@ -1,4 +1,5 @@
 import 'package:carrental/data%20modals/car.dart';
+import 'package:carrental/presentation/pages/car_details.dart';
 import 'package:flutter/material.dart';
 
 class CarCard extends StatelessWidget {
@@ -8,6 +9,12 @@ class CarCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CarDetailsPage(car: car)),
+        );
+      },
       child: Container(
         decoration: BoxDecoration(
           color: Color(0xffF3F3F3),
