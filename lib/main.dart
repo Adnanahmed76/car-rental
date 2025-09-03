@@ -1,5 +1,7 @@
 import 'package:carrental/firebase_options.dart';
-import 'package:carrental/onboarding.dart';
+import 'package:carrental/presentation/pages/car_details.dart';
+import 'package:carrental/presentation/pages/car_list_screen.dart';
+import 'package:carrental/presentation/pages/onboarding.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Onboarding(),
+      home: CarDetailsPage(),
     );
   }
 }
